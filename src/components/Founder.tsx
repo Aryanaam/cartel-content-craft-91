@@ -27,9 +27,11 @@ const Founder = () => {
           {/* Photo */}
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-primary p-1 animate-glow-pulse">
-              <div className="w-full h-full bg-muted/20 rounded-xl flex items-center justify-center">
-                <div className="text-6xl text-primary/50">👨‍💼</div>
-              </div>
+              <img 
+                src="/lovable-uploads/c5f06243-aa60-4ab4-a280-ca28c717dcd7.png" 
+                alt="Marcus Sterling - Founder & Chief Content Strategist"
+                className="w-full h-full object-cover rounded-xl"
+              />
             </div>
             {/* Decorative Elements */}
             <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary/20 rounded-full blur-sm" />

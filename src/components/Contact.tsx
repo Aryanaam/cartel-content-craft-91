@@ -41,13 +41,13 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      subtitle: "Mon-Fri 9AM-6PM EST"
+      value: "+91 7452859955",
+      subtitle: "Mon-Fri 9AM-6PM IST"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Headquarters",
-      value: "New York, NY",
+      value: "Agra, India",
       subtitle: "Where empires are built"
     }
   ];
