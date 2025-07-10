@@ -1,10 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Quote, Award, Users, TrendingUp, Linkedin, Twitter } from "lucide-react";
-
 const Founder = () => {
-  return (
-    <section id="founder" className="py-24 bg-background">
+  return <section id="founder" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -27,11 +25,7 @@ const Founder = () => {
           {/* Photo */}
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-primary p-1 animate-glow-pulse">
-              <img 
-                src="/lovable-uploads/c5f06243-aa60-4ab4-a280-ca28c717dcd7.png" 
-                alt="Marcus Sterling - Founder & Chief Content Strategist"
-                className="w-full h-full object-cover rounded-xl"
-              />
+              <img src="/lovable-uploads/c5f06243-aa60-4ab4-a280-ca28c717dcd7.png" alt="Marcus Sterling - Founder & Chief Content Strategist" className="w-full h-full object-cover rounded-xl" />
             </div>
             {/* Decorative Elements */}
             <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary/20 rounded-full blur-sm" />
@@ -60,7 +54,7 @@ const Founder = () => {
               </div>
               <div className="text-center p-4 bg-card/50 rounded-lg border border-border/50">
                 <div className="text-2xl font-bold text-accent">250+</div>
-                <div className="text-sm text-muted-foreground">Brands Transformed</div>
+                <div className="text-sm text-muted-foreground">250+</div>
               </div>
               <div className="text-center p-4 bg-card/50 rounded-lg border border-border/50">
                 <div className="text-2xl font-bold text-primary-glow">$50M+</div>
@@ -131,8 +125,6 @@ const Founder = () => {
           </CardContent>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Founder;
