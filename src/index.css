@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Content Cartel Design System - Modern, Bold, Professional */
+
+@layer base {
+  :root {
+    /* Background System */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    /* Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    /* Popover System */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Brand Green System - Fresh and Modern */
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 142 69% 58%;
+    --primary-dark: 142 76% 36%;
+
+    /* Secondary System */
+    --secondary: 210 20% 98%;
+    --secondary-foreground: 222.2 84% 4.9%;
+
+    /* Muted System */
+    --muted: 210 20% 98%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    /* Accent System - Complementary emerald */
+    --accent: 160 84% 39%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status Colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Form Elements */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262 83% 58%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 69% 58%));
+    --gradient-hero: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(160 84% 39%) 50%, hsl(120 60% 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(142 50% 96%) 0%, hsl(0 0% 100%) 100%);
+
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(142 71% 45% / 0.3);
+    --shadow-glow: 0 0 40px hsl(142 69% 58% / 0.4);
+    --shadow-soft: 0 4px 20px -4px hsl(142 71% 45% / 0.1);
+
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Background System */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    /* Dark Card System */
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    /* Dark Popover System */
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Dark Brand System */
+    --primary: 142 69% 58%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --primary-glow: 142 69% 70%;
+    --primary-dark: 142 76% 36%;
+
+    /* Dark Secondary System */
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Dark Muted System */
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    /* Dark Accent System */
+    --accent: 160 84% 45%;
+    --accent-foreground: 222.2 84% 4.9%;
+
+    /* Dark Status Colors */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Dark Form Elements */
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 262 100% 75%;
+
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 69% 58%), hsl(142 69% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(142 69% 58%) 0%, hsl(160 84% 45%) 50%, hsl(120 60% 55%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(142 50% 8%) 0%, hsl(222.2 84% 4.9%) 100%);
+
+    /* Dark Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 40px hsl(142 69% 58% / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
