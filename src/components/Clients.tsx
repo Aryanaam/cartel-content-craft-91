@@ -62,11 +62,11 @@ const Clients = () => {
                 key={`first-${index}`}
                 className="flex-shrink-0 mx-8 group"
               >
-                <div className="w-32 h-16 flex items-center justify-center p-4 bg-card/30 rounded-lg border border-border/30 backdrop-blur-sm hover:border-primary/30 transition-all duration-300 hover:scale-105">
+                <div className="w-64 h-32 flex items-center justify-center p-6 bg-card/30 rounded-lg border border-border/30 backdrop-blur-sm hover:border-primary/30 transition-all duration-300 hover:scale-105">
                   <img 
                     src={client.logo} 
                     alt={`${client.name} logo`}
-                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    className="max-w-full max-h-full object-contain transition-all duration-300"
                     onError={(e) => {
                       // Fallback to text if image fails to load
                       const target = e.currentTarget as HTMLImageElement;
@@ -88,11 +88,11 @@ const Clients = () => {
                 key={`second-${index}`}
                 className="flex-shrink-0 mx-8 group"
               >
-                <div className="w-32 h-16 flex items-center justify-center p-4 bg-card/30 rounded-lg border border-border/30 backdrop-blur-sm hover:border-primary/30 transition-all duration-300 hover:scale-105">
+                <div className="w-64 h-32 flex items-center justify-center p-6 bg-card/30 rounded-lg border border-border/30 backdrop-blur-sm hover:border-primary/30 transition-all duration-300 hover:scale-105">
                   <img 
                     src={client.logo} 
                     alt={`${client.name} logo`}
-                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    className="max-w-full max-h-full object-contain transition-all duration-300"
                     onError={(e) => {
                       // Fallback to text if image fails to load
                       const target = e.currentTarget as HTMLImageElement;
