@@ -1,19 +1,18 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star, Award, ArrowRight } from "lucide-react";
 
 const Clients = () => {
   const clients = [
-    { name: "The Salt Cafe", logo: "☕" },
-    { name: "Qairo", logo: "🏢" },
-    { name: "Vadilal", logo: "🍦" },
-    { name: "Coca-Cola", logo: "🥤" },
-    { name: "VibeCraft", logo: "✨" },
-    { name: "PVR Cinemas", logo: "🎬" },
-    { name: "Kidult India", logo: "🎯" },
-    { name: "7 Eras", logo: "7️⃣" },
-    { name: "Jawa", logo: "🏍️" },
-    { name: "Bluebird Events", logo: "🐦" }
+    { name: "The Salt Cafe", logo: "/lovable-uploads/the-salt-cafe.png" },
+    { name: "Qairo", logo: "/lovable-uploads/qairo.png" },
+    { name: "Vadilal", logo: "/lovable-uploads/vadilal.png" },
+    { name: "Coca-Cola", logo: "/lovable-uploads/coca-cola.png" },
+    { name: "VibeCraft", logo: "/lovable-uploads/vibecraft.png" },
+    { name: "PVR Cinemas", logo: "/lovable-uploads/pvr-cinemas.png" },
+    { name: "Kidult India", logo: "/lovable-uploads/kidult-india.png" },
+    { name: "7 Eras", logo: "/lovable-uploads/7-eras.png" },
+    { name: "Jawa", logo: "/lovable-uploads/jawa.png" },
+    { name: "Bluebird Events", logo: "/lovable-uploads/bluebird-events.png" }
   ];
 
   return (
@@ -55,27 +54,61 @@ const Clients = () => {
           </div>
         </div>
 
-        {/* Client Logos Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16">
-          {clients.map((client, index) => (
-            <Card 
-              key={index} 
-              className="group bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-elegant animate-fade-in overflow-hidden hover-scale"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <CardContent className="p-6 text-center">
-                {/* Logo */}
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {client.logo}
+        {/* Moving Client Logos */}
+        <div className="relative overflow-hidden mb-16">
+          <div className="flex animate-infinite-scroll hover:[animation-play-state:paused]">
+            {/* First set of logos */}
+            {clients.map((client, index) => (
+              <div 
+                key={`first-${index}`}
+                className="flex-shrink-0 mx-8 group"
+              >
+                <div className="w-32 h-16 flex items-center justify-center p-4 bg-card/30 rounded-lg border border-border/30 backdrop-blur-sm hover:border-primary/30 transition-all duration-300 hover:scale-105">
+                  <img 
+                    src={client.logo} 
+                    alt={`${client.name} logo`}
+                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    onError={(e) => {
+                      // Fallback to text if image fails to load
+                      const target = e.currentTarget as HTMLImageElement;
+                      target.style.display = 'none';
+                      const nextElement = target.nextElementSibling as HTMLElement;
+                      if (nextElement) nextElement.style.display = 'block';
+                    }}
+                  />
+                  <div className="hidden text-sm font-semibold text-muted-foreground group-hover:text-primary transition-colors">
+                    {client.name}
+                  </div>
                 </div>
-                
-                {/* Company Name */}
-                <h3 className="font-bold text-lg group-hover:text-primary transition-colors duration-300">
-                  {client.name}
-                </h3>
-              </CardContent>
-            </Card>
-          ))}
+              </div>
+            ))}
+            
+            {/* Duplicate set for seamless infinite scroll */}
+            {clients.map((client, index) => (
+              <div 
+                key={`second-${index}`}
+                className="flex-shrink-0 mx-8 group"
+              >
+                <div className="w-32 h-16 flex items-center justify-center p-4 bg-card/30 rounded-lg border border-border/30 backdrop-blur-sm hover:border-primary/30 transition-all duration-300 hover:scale-105">
+                  <img 
+                    src={client.logo} 
+                    alt={`${client.name} logo`}
+                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    onError={(e) => {
+                      // Fallback to text if image fails to load
+                      const target = e.currentTarget as HTMLImageElement;
+                      target.style.display = 'none';
+                      const nextElement = target.nextElementSibling as HTMLElement;
+                      if (nextElement) nextElement.style.display = 'block';
+                    }}
+                  />
+                  <div className="hidden text-sm font-semibold text-muted-foreground group-hover:text-primary transition-colors">
+                    {client.name}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* CTA Section */}
