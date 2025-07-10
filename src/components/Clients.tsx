@@ -1,18 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { Star, Award, ArrowRight } from "lucide-react";
 
+// Import authentic logos
+import theSaltCafeLogo from "@/assets/the-salt-cafe.png";
+import qairoLogo from "@/assets/qairo.png";
+import vadilalLogo from "@/assets/vadilal.png";
+import cocaColaLogo from "/lovable-uploads/coca-cola.png";
+import vibecraftLogo from "@/assets/vibecraft.png";
+import pvrCinemasLogo from "@/assets/pvr-cinemas.png";
+import kidultIndiaLogo from "@/assets/kidult-india.png";
+import sevenErasLogo from "@/assets/7-eras.png";
+import jawaLogo from "@/assets/jawa.png";
+import bluebirdEventsLogo from "@/assets/bluebird-events.png";
+
 const Clients = () => {
   const clients = [
-    { name: "The Salt Cafe", logo: "/lovable-uploads/the-salt-cafe.png" },
-    { name: "Qairo", logo: "/lovable-uploads/qairo.png" },
-    { name: "Vadilal", logo: "/lovable-uploads/vadilal.png" },
-    { name: "Coca-Cola", logo: "/lovable-uploads/coca-cola.png" },
-    { name: "VibeCraft", logo: "/lovable-uploads/vibecraft.png" },
-    { name: "PVR Cinemas", logo: "/lovable-uploads/pvr-cinemas.png" },
-    { name: "Kidult India", logo: "/lovable-uploads/kidult-india.png" },
-    { name: "7 Eras", logo: "/lovable-uploads/7-eras.png" },
-    { name: "Jawa", logo: "/lovable-uploads/jawa.png" },
-    { name: "Bluebird Events", logo: "/lovable-uploads/bluebird-events.png" }
+    { name: "The Salt Cafe", logo: theSaltCafeLogo },
+    { name: "Qairo", logo: qairoLogo },
+    { name: "Vadilal", logo: vadilalLogo },
+    { name: "Coca-Cola", logo: cocaColaLogo },
+    { name: "VibeCraft", logo: vibecraftLogo },
+    { name: "PVR Cinemas", logo: pvrCinemasLogo },
+    { name: "Kidult India", logo: kidultIndiaLogo },
+    { name: "7 Eras", logo: sevenErasLogo },
+    { name: "Jawa", logo: jawaLogo },
+    { name: "Bluebird Events", logo: bluebirdEventsLogo }
   ];
 
   return (
