@@ -25,7 +25,7 @@ const Founder = () => {
           {/* Photo */}
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-primary p-1 animate-glow-pulse">
-              <img src="/lovable-uploads/c5f06243-aa60-4ab4-a280-ca28c717dcd7.png" alt="Marcus Sterling - Founder & Chief Content Strategist" className="w-full h-full object-cover rounded-xl" />
+              <img src="/lovable-uploads/c5f06243-aa60-4ab4-a280-ca28c717dcd7.png" alt="Akanshit Bhatnagar - Founder & Chief Strategist" className="w-full h-full object-cover rounded-xl" />
             </div>
             {/* Decorative Elements */}
             <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary/20 rounded-full blur-sm" />
@@ -35,8 +35,8 @@ const Founder = () => {
           {/* Content */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-2">Marcus Sterling</h3>
-              <p className="text-xl text-primary font-semibold mb-4">Founder & Chief Content Strategist</p>
+            <h3 className="text-3xl md:text-4xl font-bold mb-2">Akanshit Bhatnagar</h3>
+              <p className="text-xl text-primary font-semibold mb-4">Founder & Chief Strategist</p>
               
               <div className="relative">
                 <Quote className="absolute -top-2 -left-2 w-8 h-8 text-primary/30" />
@@ -49,15 +49,15 @@ const Founder = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center p-4 bg-card/50 rounded-lg border border-border/50">
-                <div className="text-2xl font-bold text-primary">12+</div>
+                <div className="text-2xl font-bold text-primary">5+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
               <div className="text-center p-4 bg-card/50 rounded-lg border border-border/50">
-                <div className="text-2xl font-bold text-accent">250+</div>
-                <div className="text-sm text-muted-foreground">250+</div>
+                <div className="text-2xl font-bold text-accent">140+</div>
+                <div className="text-sm text-muted-foreground">Brands Transformed</div>
               </div>
               <div className="text-center p-4 bg-card/50 rounded-lg border border-border/50">
-                <div className="text-2xl font-bold text-primary-glow">$50M+</div>
+                <div className="text-2xl font-bold text-primary-glow">₹50Cr+</div>
                 <div className="text-sm text-muted-foreground">Revenue Generated</div>
               </div>
             </div>
@@ -83,7 +83,7 @@ const Founder = () => {
               <div>
                 <h4 className="text-2xl font-bold mb-4 text-foreground">The Journey to Domination</h4>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Marcus began his journey in the trenches of digital marketing, working with Fortune 500 companies and watching how mediocre content failed to move the needle. Frustrated by the industry's acceptance of "good enough," he founded Content Cartel with a radical vision.
+                  Akanshit began his journey in the trenches of digital marketing, working with Fortune 500 companies and watching how mediocre content failed to move the needle. Frustrated by the industry's acceptance of "good enough," he founded Content Cartel with a radical vision.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   Today, Content Cartel stands as the premier destination for brands that refuse to blend in. We don't just create content—we architect empires, one strategic campaign at a time.
@@ -97,7 +97,7 @@ const Founder = () => {
                   </div>
                   <div>
                     <h5 className="font-semibold mb-1">Strategic Vision</h5>
-                    <p className="text-sm text-muted-foreground">15+ years crafting campaigns that don't just engage—they dominate.</p>
+                    <p className="text-sm text-muted-foreground">5+ years crafting Strategies that don't just engage—they dominate.</p>
                   </div>
                 </div>
                 

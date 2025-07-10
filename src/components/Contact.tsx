@@ -35,7 +35,7 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      value: "hello@contentcartel.com",
+      value: "hello@contentcartel.in",
       subtitle: "For new business inquiries"
     },
     {
