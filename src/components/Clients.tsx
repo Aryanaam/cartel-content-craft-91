@@ -1,30 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Star, Award, ArrowRight } from "lucide-react";
 
-// Import authentic logos
-import theSaltCafeLogo from "@/assets/the-salt-cafe.png";
-import qairoLogo from "@/assets/qairo.png";
-import vadilalLogo from "@/assets/vadilal.png";
-import cocaColaLogo from "/lovable-uploads/coca-cola.png";
-import vibecraftLogo from "@/assets/vibecraft.png";
-import pvrCinemasLogo from "@/assets/pvr-cinemas.png";
-import kidultIndiaLogo from "@/assets/kidult-india.png";
-import sevenErasLogo from "@/assets/7-eras.png";
-import jawaLogo from "@/assets/jawa.png";
-import bluebirdEventsLogo from "@/assets/bluebird-events.png";
-
+// Import authentic client logos
 const Clients = () => {
   const clients = [
-    { name: "The Salt Cafe", logo: theSaltCafeLogo },
-    { name: "Qairo", logo: qairoLogo },
-    { name: "Vadilal", logo: vadilalLogo },
-    { name: "Coca-Cola", logo: cocaColaLogo },
-    { name: "VibeCraft", logo: vibecraftLogo },
-    { name: "PVR Cinemas", logo: pvrCinemasLogo },
-    { name: "Kidult India", logo: kidultIndiaLogo },
-    { name: "7 Eras", logo: sevenErasLogo },
-    { name: "Jawa", logo: jawaLogo },
-    { name: "Bluebird Events", logo: bluebirdEventsLogo }
+    { name: "Nuclear", logo: "/lovable-uploads/07d7bf86-d358-491b-8640-1ec3fd17294b.png" },
+    { name: "VibeCraft", logo: "/lovable-uploads/2f298b34-96d3-4fd2-8426-7fb0413619de.png" },
+    { name: "Kidult India", logo: "/lovable-uploads/948bfe9c-0738-4593-b0ca-c1d3cb045cb9.png" },
+    { name: "PVR Cinemas", logo: "/lovable-uploads/d84a164d-63d3-4e76-9cbd-44f997a4df74.png" },
+    { name: "Bluebird Events", logo: "/lovable-uploads/ecd191d1-7d7f-4fcc-a0d3-6bd830a0c75a.png" },
+    { name: "Jawa", logo: "/lovable-uploads/d2e480a9-7cd5-4f58-aafd-e57a8a32fa73.png" },
+    { name: "Coca-Cola", logo: "/lovable-uploads/9979c1b6-20ab-4cd6-8240-effdbe958ac9.png" },
+    { name: "Vadilal", logo: "/lovable-uploads/e2bf2bf9-969d-45ed-a95f-f4102e12b36e.png" }
   ];
 
   return (
