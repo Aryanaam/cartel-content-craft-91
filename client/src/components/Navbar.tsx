@@ -40,7 +40,13 @@ const Navbar = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center space-x-4">
+            <a
+              href="/admin/login"
+              className="text-sm text-gray-600 hover:text-primary transition-colors duration-300"
+            >
+              Admin
+            </a>
             <Button variant="hero" className="shadow-soft hover:shadow-glow">
               Get Started
             </Button>
