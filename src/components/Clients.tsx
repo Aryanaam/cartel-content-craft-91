@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Star, Award, ArrowRight } from "lucide-react";
 
@@ -11,7 +10,7 @@ const Clients = () => {
     { name: "PVR Cinemas", logo: "/lovable-uploads/d84a164d-63d3-4e76-9cbd-44f997a4df74.png" },
     { name: "Bluebird Events", logo: "/lovable-uploads/ecd191d1-7d7f-4fcc-a0d3-6bd830a0c75a.png" },
     { name: "Jawa", logo: "/lovable-uploads/d2e480a9-7cd5-4f58-aafd-e57a8a32fa73.png" },
-    { name: "Coca-Cola", logo: "/lovable-uploads/36c593cd-afc9-44f1-ac36-952a1cf47fce.png" },
+    { name: "Coca-Cola", logo: "/coca-cola.png" },
     { name: "Vadilal", logo: "/lovable-uploads/dbaa026c-e9e3-4808-9e24-4cd11e214d8a.png" }
   ];
 
