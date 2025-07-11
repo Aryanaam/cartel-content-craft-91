@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Star, Award, ArrowRight } from "lucide-react";
 
@@ -10,8 +11,8 @@ const Clients = () => {
     { name: "PVR Cinemas", logo: "/lovable-uploads/d84a164d-63d3-4e76-9cbd-44f997a4df74.png" },
     { name: "Bluebird Events", logo: "/lovable-uploads/ecd191d1-7d7f-4fcc-a0d3-6bd830a0c75a.png" },
     { name: "Jawa", logo: "/lovable-uploads/d2e480a9-7cd5-4f58-aafd-e57a8a32fa73.png" },
-    { name: "Coca-Cola", logo: "/lovable-uploads/9979c1b6-20ab-4cd6-8240-effdbe958ac9.png" },
-    { name: "Vadilal", logo: "/lovable-uploads/e2bf2bf9-969d-45ed-a95f-f4102e12b36e.png" }
+    { name: "Coca-Cola", logo: "/lovable-uploads/36c593cd-afc9-44f1-ac36-952a1cf47fce.png" },
+    { name: "Vadilal", logo: "/lovable-uploads/dbaa026c-e9e3-4808-9e24-4cd11e214d8a.png" }
   ];
 
   return (
@@ -55,7 +56,7 @@ const Clients = () => {
 
         {/* Moving Client Logos */}
         <div className="relative overflow-hidden mb-16">
-          <div className="flex animate-infinite-scroll hover:[animation-play-state:paused]">
+          <div className="flex animate-[infinite-scroll_15s_linear_infinite] hover:[animation-play-state:paused]">
             {/* First set of logos */}
             {clients.map((client, index) => (
               <div 
