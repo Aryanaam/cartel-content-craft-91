@@ -56,7 +56,7 @@ const Clients = () => {
 
         {/* Moving Client Logos */}
         <div className="relative overflow-hidden mb-16">
-          <div className="flex animate-[infinite-scroll_15s_linear_infinite] hover:[animation-play-state:paused]">
+          <div className="flex animate-[infinite-scroll_5s_linear_infinite] hover:[animation-play-state:paused]">
             {/* First set of logos */}
             {clients.map((client, index) => (
               <div 
