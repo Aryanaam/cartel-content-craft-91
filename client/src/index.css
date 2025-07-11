@@ -58,6 +58,27 @@
     /* Animation */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
+    /* Size Editor Variables */
+    --hero-height: 100vh;
+    --hero-title-size: 28px;
+    --hero-subtitle-size: 20px;
+    --hero-padding: 24px;
+    --services-padding: 24px;
+    --services-card-height: 300px;
+    --services-grid-gap: 32px;
+    --services-title-size: 20px;
+    --portfolio-padding: 24px;
+    --portfolio-image-height: 240px;
+    --portfolio-grid-gap: 32px;
+    --founder-padding: 24px;
+    --founder-image-size: 300px;
+    --founder-text-size: 18px;
+    --contact-padding: 24px;
+    --contact-form-width: 600px;
+    --contact-spacing: 16px;
+    --container-max-width: 1280px;
+    --section-spacing: 96px;
+
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;

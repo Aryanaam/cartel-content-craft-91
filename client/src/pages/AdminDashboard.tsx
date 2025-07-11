@@ -8,7 +8,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { ContentItem } from "@shared/schema";
-import { Plus, Edit, Trash2, LogOut } from "lucide-react";
+import { Plus, Edit, Trash2, LogOut, Settings } from "lucide-react";
 import ContentItemForm from "@/components/admin/ContentItemForm";
 import ContentItemList from "@/components/admin/ContentItemList";
 
@@ -105,6 +105,14 @@ const AdminDashboard = () => {
             <Badge variant="outline">Welcome, {user.username}</Badge>
           </div>
           <div className="flex items-center space-x-4">
+            <Button
+              onClick={() => setLocation("/admin/size-editor")}
+              variant="outline"
+              className="flex items-center space-x-2"
+            >
+              <Settings size={16} />
+              <span>Size Editor</span>
+            </Button>
             <Button
               onClick={() => setShowForm(true)}
               className="flex items-center space-x-2"
