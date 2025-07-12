@@ -5,23 +5,43 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin, ArrowRight, Zap } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
 
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
     message: ""
+  });
+
+  const contactMutation = useMutation({
+    mutationFn: (data: { name: string; email: string; message: string }) =>
+      apiRequest("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      }),
+    onSuccess: () => {
+      toast({
+        title: "Message Sent!",
+        description: "We'll get back to you within 24 hours to discuss your content strategy.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    },
+    onError: () => {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    },
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours to discuss your content domination strategy.",
-    });
-    setFormData({ name: "", email: "", company: "", message: "" });
+    contactMutation.mutate(formData);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -113,19 +133,7 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium mb-2">
-                    Company
-                  </label>
-                  <Input
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    placeholder="Your company name"
-                    className="border-border/50 focus:border-primary transition-colors"
-                  />
-                </div>
+
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
@@ -148,8 +156,9 @@ const Contact = () => {
                   variant="hero" 
                   size="lg" 
                   className="w-full animate-glow-pulse"
+                  disabled={contactMutation.isPending}
                 >
-                  Launch My Empire
+                  {contactMutation.isPending ? "Sending..." : "Launch My Empire"}
                   <ArrowRight className="ml-2" />
                 </Button>
               </form>

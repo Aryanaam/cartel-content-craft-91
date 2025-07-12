@@ -4,7 +4,7 @@ import heroBackground from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: 'var(--hero-height)' }}>
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background/80 to-accent/10" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto text-center" style={{ maxWidth: 'var(--container-max-width)', padding: 'var(--hero-padding)' }}>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-8">
@@ -24,7 +24,7 @@ const Hero = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-bold mb-6 leading-tight" style={{ fontSize: 'clamp(var(--hero-title-size), 4vw, calc(var(--hero-title-size) * 2.5))' }}>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="block text-foreground">Dominate Your Market</span>
             <span className="block bg-gradient-hero bg-clip-text text-transparent">
               With Content That Converts
@@ -32,7 +32,7 @@ const Hero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed" style={{ fontSize: 'clamp(var(--hero-subtitle-size), 2vw, calc(var(--hero-subtitle-size) * 1.2))' }}>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
             We don't just create content—we orchestrate campaigns that captivate audiences, 
             build empires, and turn your brand into an unstoppable force.
           </p>

@@ -1,44 +1,21 @@
-import { pgTable, text, serial, integer, boolean } from "drizzle-orm/pg-core";
+// Simple schema for basic contact form functionality
+import { pgTable, text, serial, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export const users = pgTable("users", {
+export const contactMessages = pgTable("contact_messages", {
   id: serial("id").primaryKey(),
-  username: text("username").notNull().unique(),
-  password: text("password").notNull(),
+  name: text("name").notNull(),
+  email: text("email").notNull(),
+  message: text("message").notNull(),
+  createdAt: timestamp("created_at").defaultNow(),
 });
 
-export const insertUserSchema = createInsertSchema(users).pick({
-  username: true,
-  password: true,
+export const insertContactMessageSchema = createInsertSchema(contactMessages).pick({
+  name: true,
+  email: true,
+  message: true,
 });
 
-export type InsertUser = z.infer<typeof insertUserSchema>;
-export type User = typeof users.$inferSelect;
-
-// Admin Panel Content Management Schema
-export const contentItems = pgTable("content_items", {
-  id: serial("id").primaryKey(),
-  type: text("type").notNull(), // 'hero', 'service', 'portfolio', 'testimonial', 'client'
-  title: text("title").notNull(),
-  content: text("content").notNull(),
-  imageUrl: text("image_url"),
-  link: text("link"),
-  metrics: text("metrics"), // JSON string for portfolio metrics
-  order: integer("order").default(0),
-  isActive: boolean("is_active").default(true),
-});
-
-export const insertContentItemSchema = createInsertSchema(contentItems).pick({
-  type: true,
-  title: true,
-  content: true,
-  imageUrl: true,
-  link: true,
-  metrics: true,
-  order: true,
-  isActive: true,
-});
-
-export type InsertContentItem = z.infer<typeof insertContentItemSchema>;
-export type ContentItem = typeof contentItems.$inferSelect;
+export type InsertContactMessage = z.infer<typeof insertContactMessageSchema>;
+export type ContactMessage = typeof contactMessages.$inferSelect;
